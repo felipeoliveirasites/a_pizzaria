@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Armagedom</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <script type="module" crossorigin src=".assets/index-C_32MFvP.js"></script>
+  <link rel="stylesheet" crossorigin href=".assets/style-B5fEENJL.css">
+</head>
+<body id="corpo">
+     <!-- HEADER / MENU FIXO -->   
+  <header class="header">
+  <!-- <div class="animacao">
+    <img src="dist/img/freepik__a-slice-of-pizza-with-a-happy-face-pepperoni-and-g__42174.png" alt="Pizza Icon">
+  </div> -->
+
+<div id="logo-e-nome" class="logo-e-nome">
+
+   <picture class="logos">
+      <source media="(min-width: 1024px)" srcset="./assets/logo-desktop-CmUs-rHQ.webp">
+
+      <source media="(min-width: 768px)" srcset="/assets/logo-tablet-Dka5kNId.webp">
+
+      <img src="/assets/logo-mobile-NpVnyWRv.webp" class="logo" alt="Logo da Minha Pizzaria" class="logo">
+  </picture>
+
+  <div class="nome-empresa">Pizzaria Armagedom</div>
+
+</div>
+
+  <!-- Botão para abrir o menu lateral -->
+  <button id="btnMenu" aria-label="Abrir menu">
+    <img src="/assets/menu-AfBzfGek.webp" alt="pizza">
+  </button>
+
+  <!-- Overlay e menu lateral -->
+  <div class="overlay" id="overlay"></div>
+  <nav class="menu-lateral" id="menuLateral">
+    <button id="fecharMenu" aria-label="Fechar menu">&times;</button>
+    <ul class="menu-list">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#promocoes">Promoções</a></li>
+      <li><a href="#sobre">Sobre nós</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <main>
+        <!-- BANNER PRINCIPAL COM OVERLAY E CTA -->
+  <section id="home" class="banner">
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gxtoib5WnxY?end=1000&amp;loop=0&amp;playlist=gxtoib5WnxY&amp;controls=0&amp;autoplay=1&amp;mute=1&amp;modestbranding=1&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       <div class="overlay-iframe1">overlay</div>
+      </div>
+
+    <div class="slider-container">
+
+    <div class="slide active">
+        <div class="slide-content">
+            <h1>A Melhor Pizza da Cidade</h1>
+            <p>Sabores únicos e ingredientes selecionados para você.</p>
+            <a href="#" class="btn">Peça Agora</a>
+        </div>
+    </div>
+
+    <div class="slide">
+        
+        <div class="slide-content">
+            <h1>Experimente Nossa Borda Recheada</h1>
+            <p>O recheio que você ama, agora na borda!</p>
+            <a href="#" class="btn">Veja o Cardápio</a>
+        </div>
+    </div>
+
+    <div class="slide">
+        
+        <div class="slide-content">
+            <h1>A Tradição Italiana na Sua Mesa</h1>
+            <p>A clássica Marguerita com um toque especial.</p>
+            <a href="#" class="btn">Conheça a História</a>
+        </div>
+    </div>
+
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+
+    <div class="dots-container">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</div>
+    <div class="overlay">
+      <h1>Sabor que reúne, tradição que aquece</h1>
+     <!-- 85 -->
+      <a href="https://wa.me/seunumeroaqui" class="btn-whatsapp">Peça agora no WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- CARDÁPIO -->
+   
+  <section id="cardapio" class="secao">
+    <h2>Nosso Cardápio</h2>
+    <div class="categorias-cardapio">
+      <button>Tradicionais</button>
+      <button>Especiais</button>
+      <button>Bebidas</button>
+      <button>Sobremesas</button>
+    </div>
+    <div class="itens-cardapio">
+      <!-- Itens serão inseridos via JS ou manual -->
+    </div>
+  </section>
+
+  <!-- PROMOÇÕES -->
+  <section id="promocoes" class="secao">
+    <h2>Promoções Especiais</h2>
+    <div class="lista-promocoes">
+      <!-- Ofertas em destaque -->
+    </div>
+  </section>
+
+  <!-- SOBRE NÓS -->
+  <section id="sobre" class="secao">
+    <h2>Nossa História</h2>
+    <p>
+      Fundada em um pequeno bairro por um casal apaixonado por massas artesanais...
+    </p>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="secao">
+    <h2>Fale Conosco</h2>
+    <ul class="contatos">
+      <li><a href="https://wa.me/seunumero">WhatsApp</a></li>
+      <li><a href="https://instagram.com/sua_pizzaria" target="_blank">Instagram</a></li>
+      <li><a href="https://facebook.com/sua_pizzaria" target="_blank">Facebook</a></li>
+    </ul>
+  </section>
+
+    </main>
+    <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Pizzaria Armagedom. Todos os direitos reservados.</p>
+  </footer>
+
+    </footer>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const sliderContainer = document.querySelector('.slider-container');
+    const slides = document.querySelectorAll('.slide');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const dotsContainer = document.querySelector('.dots-container');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+    let slideInterval = 0;
+
+    // Função para mostrar o slide atual
+    function showSlide(index) {
+        // Remove a classe 'active' de todos os slides e pontos
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        // Adiciona a classe 'active' ao slide e ponto corretos
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+    }
+
+    // Função para ir para o próximo slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    // Função para iniciar a transição automática
+    function startAutoSlide() {
+        slideInterval = setInterval(nextSlide, 5000); // Muda de slide a cada 5 segundos
+    }
+
+    // Função para parar a transição automática
+    function stopAutoSlide() {
+        clearInterval(slideInterval);
+    }
+
+    // Inicializa o slider
+    showSlide(currentSlide);
+    startAutoSlide();
+
+    // Adiciona eventos de clique aos botões de navegação
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            stopAutoSlide(); // Para o autoplay
+            const isNext = button.classList.contains('next');
+            if (isNext) {
+                currentSlide = (currentSlide + 1) % totalSlides;
+            } else {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            }
+            showSlide(currentSlide);
+            startAutoSlide(); // Reinicia o autoplay após a navegação manual
+        });
+    });
+
+    // Adiciona eventos de clique aos pontos indicadores
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            stopAutoSlide(); // Para o autoplay
+            currentSlide = index;
+            showSlide(currentSlide);
+            startAutoSlide(); // Reinicia o autoplay
+        });
+    });
+
+    // Para o autoplay quando o mouse passa sobre o slider
+    sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+    sliderContainer.addEventListener('mouseleave', startAutoSlide);
+});
+   </script>
+   
+</body>
+</html>
+   
