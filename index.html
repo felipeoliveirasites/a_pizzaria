@@ -6,8 +6,8 @@
     <title>Pizzaria Armagedom</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-  <script type="module" crossorigin src="./assets/index-C_32MFvP.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/style-C6NPbBbz.css">
+  <script type="module" crossorigin src="./assets/index-zg4rbhCZ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-DshsW6Ec.css">
 </head>
 <body id="corpo">
      <!-- HEADER / MENU FIXO -->   
@@ -52,14 +52,15 @@
     <main>
         <!-- BANNER PRINCIPAL COM OVERLAY E CTA -->
   <section id="home" class="banner">
-      <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gxtoib5WnxY?end=1000&amp;loop=0&amp;playlist=gxtoib5WnxY&amp;controls=0&amp;autoplay=1&amp;mute=1&amp;modestbranding=1&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-       <div class="overlay-iframe1">overlay</div>
-      </div>
 
-    <div class="slider-container">
+    <div class="video">
+        <!-- <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gxtoib5WnxY?end=1000&amp;loop=0&amp;playlist=gxtoib5WnxY&amp;controls=0&amp;autoplay=1&amp;mute=1&amp;modestbranding=1&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+       <div class="overlay-iframe1"></div>
+    </div>
 
+    <div class="slider-container"> <!-- 3 slide + 2 button de nav + 1 container dots de ( 3 dots)-->
     <div class="slide active">
+       
         <div class="slide-content peca">
             <h1>A Melhor Pizza da Cidade</h1>
             <p>Sabores únicos e ingredientes selecionados para você.</p>
@@ -69,7 +70,7 @@
 
     <div class="slide">
         
-        <div class="slide-content">
+        <div class="slide-content cardapio">
             <h1>Experimente Nossa Borda Recheada</h1>
             <p>O recheio que você ama, agora na borda!</p>
             <a href="#" class="btn">Veja o Cardápio</a>
@@ -77,11 +78,11 @@
     </div>
 
     <div class="slide">
-        
-        <div class="slide-content">
+       
+        <div class="slide-content conheca">
             <h1>A Tradição Italiana na Sua Mesa</h1>
             <p>A clássica Marguerita com um toque especial.</p>
-            <a href="#" class="btn">Conheça a História</a>
+            <a href="#" class="btn">Conheça a Pizzaria</a>
         </div>
     </div>
 
@@ -150,78 +151,7 @@
   </footer>
 
     </footer>
-   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const sliderContainer = document.querySelector('.slider-container');
-    const slides = document.querySelectorAll('.slide');
-    const navButtons = document.querySelectorAll('.nav-btn');
-    const dotsContainer = document.querySelector('.dots-container');
-    const dots = document.querySelectorAll('.dot');
-    const totalSlides = slides.length;
-    let currentSlide = 0;
-    let slideInterval = 0;
-
-    // Função para mostrar o slide atual
-    function showSlide(index) {
-        // Remove a classe 'active' de todos os slides e pontos
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-
-        // Adiciona a classe 'active' ao slide e ponto corretos
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-    }
-
-    // Função para ir para o próximo slide
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
-    }
-
-    // Função para iniciar a transição automática
-    function startAutoSlide() {
-        slideInterval = setInterval(nextSlide, 5000); // Muda de slide a cada 5 segundos
-    }
-
-    // Função para parar a transição automática
-    function stopAutoSlide() {
-        clearInterval(slideInterval);
-    }
-
-    // Inicializa o slider
-    showSlide(currentSlide);
-    startAutoSlide();
-
-    // Adiciona eventos de clique aos botões de navegação
-    navButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            stopAutoSlide(); // Para o autoplay
-            const isNext = button.classList.contains('next');
-            if (isNext) {
-                currentSlide = (currentSlide + 1) % totalSlides;
-            } else {
-                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            }
-            showSlide(currentSlide);
-            startAutoSlide(); // Reinicia o autoplay após a navegação manual
-        });
-    });
-
-    // Adiciona eventos de clique aos pontos indicadores
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            stopAutoSlide(); // Para o autoplay
-            currentSlide = index;
-            showSlide(currentSlide);
-            startAutoSlide(); // Reinicia o autoplay
-        });
-    });
-
-    // Para o autoplay quando o mouse passa sobre o slider
-    sliderContainer.addEventListener('mouseenter', stopAutoSlide);
-    sliderContainer.addEventListener('mouseleave', startAutoSlide);
-});
-   </script>
+  
    
 </body>
 </html>
