@@ -57,7 +57,6 @@ h1, h2, h3, h4 {
   --corTextoSecundario: var(--preto);
   --corTextoBotao: var(--creme);
   --corTextoBotaoHover: var(--branco);
-  --corAzeitona: #36c929;
   --Fonte-destaque: Bebas Neue, sans-serif;
   --Fonte-titulo: Raleway, sans-serif;
   --Fonte-corpo: Mulish, sans-serif;
@@ -447,6 +446,182 @@ main {
     transform: scale(1);
   }
 }
+.promocoes-preview {
+  position: relative;
+  max-width: 100%;
+  margin: 40px auto;
+  overflow: hidden;
+  padding: 10px;
+  background-color: var(--corFundoDestaque);
+  text-align: left;
+  text-shadow: 1px 0px #fff;
+}
+.promocoes-preview h2 {
+  color: #fff;
+}
+.promocoes-preview h3 {
+  text-box: black;
+  color: #000;
+  margin-left: 30%;
+}
+.promocoes-preview p {
+  text-shadow: 1px 0px #fff;
+  margin-left: 30%;
+}
+.promocoes-preview span.preco {
+  text-align: center;
+  margin: auto;
+  display: inline;
+  margin-left: 30%;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+.slide-promocao-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  min-width: 300px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.slide-promocao {
+  min-width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.slide-promocao img {
+  width: 100%;
+  border-radius: 12px;
+  /* box-shadow: 0px 4px 15px rgba(0,0,0,0.2); */
+  transition: transform 0.3s;
+}
+
+.slide-promocao img:hover {
+  transform: scale(1.05);
+}
+
+/* Botões */
+.prev-promocao, .next-promocao {
+  position: absolute;
+  bottom: 2px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev-promocao {
+  left: 10px;
+}
+
+.next-promocao {
+  right: 10px;
+}
+
+/* Modal */
+/* .modal-promocao {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  padding-top: 60px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+} */
+.modal-content-promocao {
+  display: block;
+  margin: auto auto;
+  max-width: 125%;
+  max-height: 125%;
+}
+
+.close-promocao {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.slide-promocao.a01 {
+  height: 100%;
+  background-image: url("../img/medio/promo1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% center;
+  height: auto;
+  z-index: 5;
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--corFundo);
+}
+
+.promo01 {
+  position: relative;
+}
+
+.coca {
+  position: absolute;
+  height: auto;
+  width: auto;
+  background-size: cover;
+  bottom: 10px;
+}
+
+.copo {
+  position: absolute;
+  height: auto;
+  width: auto;
+  bottom: 10px;
+  background-size: contain;
+}
+
+.coca-derramando {
+  position: absolute;
+  display: none;
+  height: auto;
+  width: auto;
+  background-size: auto 120%;
+  bottom: 10px;
+}
+
+.coca-derramando.ativo {
+  display: block;
+}
+
+.coca.inativo {
+  display: none;
+}
+
+.copo.inativo {
+  display: none;
+}
+
+.coca.anima {
+  animation: rodar ease-in 0.8s forwards;
+  transform-origin: center;
+}
+
+@keyframes rodar {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(110deg) translate(40px, 80px);
+  }
+}
 .menu-lateral {
   position: fixed;
   top: 0;
@@ -783,7 +958,7 @@ O favicon é aquele ícone pequenininho que aparece na aba do navegador. É uma 
   top: 0;
   left: 0;
   background-color: rgb(141, 33, 33);
-  background-image: url("../img/otimizada/medio/destaque-peca.webp");
+  background-image: url("../img/medio/destaque-peca.webp");
   background-size: cover;
   background-position: 80% 80%;
   background-size: cover;
@@ -798,7 +973,7 @@ O favicon é aquele ícone pequenininho que aparece na aba do navegador. É uma 
   top: 0;
   left: 0;
   background-color: rgb(141, 33, 33);
-  background-image: url("../img/otimizada/medio/destaque-cardapio.webp");
+  background-image: url("../img/medio/destaque-cardapio.webp");
   background-size: cover;
   background-position: 80% 80%;
   background-size: cover;
@@ -813,7 +988,7 @@ O favicon é aquele ícone pequenininho que aparece na aba do navegador. É uma 
   top: 0;
   left: 0;
   background-color: rgb(141, 33, 33);
-  background-image: url("../img/otimizada/medio/destaque-conheca.webp");
+  background-image: url("../img/medio/destaque-conheca.webp");
   background-size: cover;
   background-position: 80% 80%;
   background-size: cover;
